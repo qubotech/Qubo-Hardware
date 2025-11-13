@@ -1,14 +1,18 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const connectDB = async ()=>{
-    try {
-        mongoose.connection.on('connected', ()=> console.log("Database Connected")
-        );
-        await mongoose.connect(`${process.env.MONGODB_URI}/greencart`)
-    } catch (error) {
-        console.error(error.message);
-    }
-}
-
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 10000,
+      socketTimeoutMS: 45000,
+      bufferCommands: false,
+      maxPoolSize: 10,
+    });
+    console.log('✅ MongoDB Connected');
+  } catch (error) {
+    console.error('❌ MongoDB Connection Error:', error);
+    process.exit(1);
+  }
+};
 
 export default connectDB;
