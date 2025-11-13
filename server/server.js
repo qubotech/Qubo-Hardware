@@ -18,14 +18,15 @@ const port = process.env.PORT || 4000;
 await connectDB();
 await connectCloudinary();
 
-// ✅ Only use CORS once — this is the correct one
+// ✅ Fixed CORS - Remove trailing slashes and add proper config
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://qubo-hardware.vercel.app/'
+  'https://qubo-hardware.vercel.app'  // Remove trailing slash
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
+    // Allow requests with no origin (like curl requests or mobile apps)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -33,11 +34,14 @@ app.use(cors({
     }
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200
 }));
 
 // ✅ Middleware (after CORS)
 app.use(express.json());
+app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cookieParser());
 app.set('trust proxy', 1); // For secure cookies
 
