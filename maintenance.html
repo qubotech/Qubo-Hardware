@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error 404 - Site Not Found</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: #ffffff;
+      color: #f8fafc;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      animation: pixelFade 4s infinite alternate;
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      animation: pixelFade 4s infinite alternate;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #d62020;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #000000;
+    }
+
+    @keyframes pixelFade {
+      0% {
+        opacity: 1;
+        filter: blur(0) drop-shadow(0 0 0px #fff);
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.3;
+        filter: blur(2px) drop-shadow(0 0 4px #38bdf8);
+        transform: scale(0.98);
+      }
+      100% {
+        opacity: 1;
+        filter: blur(0) drop-shadow(0 0 0px #fff);
+        transform: scale(1);
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.8rem; }
+      p { font-size: 0.9rem; }
+      .logo { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/img/Clogo.png" alt="Logo" class="logo" />
+    <h1>Error 404: Site Not Found</h1>
+    <p>The website is in maintenance mode.<br>
+    Please contact your Admin.</p>
+    <br>
+    <p><strong>Powered - by Ajith</strong></p>
+  </div>
+  
