@@ -11,7 +11,7 @@ const connectCloudinary = async () => {
     console.log('✅ Cloudinary Connected');
     return cloudinary;
   } catch (error) {
-    console.error('❌ Cloudinary Connection Error:', error.message);
+    console.error('❌ Cloudinary Error:', error.message);
     process.exit(1);
   }
 };
