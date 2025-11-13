@@ -18,7 +18,7 @@ const port = process.env.PORT || 4000;
 await connectDB();
 await connectCloudinary();
 
-// ✅ Update allowed origins with production URLs
+// ✅ CORS Configuration - More explicit
 const allowedOrigins = [
   'http://localhost:5173',
   'https://qubo-hardware.vercel.app',
@@ -26,19 +26,27 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: allowedOrigins,
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  optionsSuccessStatus: 200,
 }));
 
-// ✅ Middleware (after CORS)
-app.use(express.json());
+// ✅ Add explicit headers middleware (backup)
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Credentials', 'true');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  if (req.method === 'OPTIONS') {
+    res.sendStatus(200);
+  } else {
+    next();
+  }
+});
+
+app.use(express.json({ limit: '50mb' }));
 app.use(cookieParser());
 app.set('trust proxy', 1); // For secure cookies
 
