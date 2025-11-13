@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL || "https://fp-mocha.vercel.app",
+  baseURL: import.meta.env.VITE_BACKEND_URL || "https://quboh.vercel.app/",
   withCredentials: true,
 });
 
@@ -14,7 +14,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const currency = import.meta.env.VITE_CURRENCY;
   const navigate = useNavigate();
-  const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://fp-mocha.vercel.app";
+  const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://quboh.vercel.app/";
 
   const [user, setUser] = useState(null);
   const [isSeller, setIsSeller] = useState(false);
