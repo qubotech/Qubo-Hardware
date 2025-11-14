@@ -113,7 +113,7 @@ const Categories = () => {
                                     value={categoryData.name}
                                     onChange={(e) => setCategoryData({ ...categoryData, name: e.target.value })}
                                     className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
-                                    placeholder="e.g., Vegetables, Fruits, Dairy"
+                                    placeholder="e.g., PC items, Laptops, Monitors"
                                     required
                                 />
                             </div>

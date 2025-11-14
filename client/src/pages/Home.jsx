@@ -140,13 +140,13 @@ const Home = () => {
       <div id="best-sellers" className="relative mt-20">
         <div className="text-center mb-10">
           <div className="inline-block relative">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-3">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
               ⭐ Best Sellers
             </h2>
-            <div className="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full animate-ping opacity-75"></div>
+            <div className="absolute -top-2 -right-2 w-8 h-8 bg-purple-400 rounded-full animate-ping opacity-75"></div>
           </div>
           <p className="text-gray-600 text-lg mt-2">Customer favorites - trending now!</p>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mx-auto mt-3"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mt-3"></div>
         </div>
 
         <div 
@@ -231,11 +231,11 @@ const Home = () => {
       {/* Enhanced Daily Freshies Section */}
       <div className="relative mt-20 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-3">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
             🌿 Daily Freshies
           </h2>
           <p className="text-gray-600 text-lg">Farm-fresh produce delivered daily</p>
-          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mt-3"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mt-3"></div>
         </div>
         <BestSeller />
       </div>
