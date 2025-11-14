@@ -23,7 +23,7 @@ import white_arrow_icon from "./white_arrow_icon.svg";
 import main_banner_bg from "./main_banner_bg.png";
 import main_banner_bg_sm from "./main_banner_bg_sm.png";
 import bottom_banner_image from "./banner_f.png";
-import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
+import bottom_banner_image_sm from "./banner_f.png";
 import add_address_iamge from "./add_address_image.svg";
 import organic_vegitable_image from "./PC Category 1.png";
 import fresh_fruits_image from "./PC Category 2.png";
