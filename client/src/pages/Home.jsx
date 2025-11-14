@@ -232,7 +232,7 @@ const Home = () => {
       <div className="relative mt-20 bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
-            🌿 Top Pheriperals
+          ϟ Top Pheriperals ϟ
           </h2>
           <p className="text-gray-600 text-lg">Top tech products delivered daily</p>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mt-3"></div>
