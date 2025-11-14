@@ -53,6 +53,12 @@ app.use('/api/address', addressRouter);
 app.use('/api/order', orderRouter);
 app.use('/api/category', CategoryRouter);
 
+// ✅ Global error handler (add before app.listen)
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err);
+  res.status(500).json({ success: false, message: err.message || 'Internal Server Error' });
+});
+
 // ✅ Start server directly (no http.createServer or socket.io)
 app.listen(port, () => {
   console.log(`🚀 Server is running on http://localhost:${port}`);
