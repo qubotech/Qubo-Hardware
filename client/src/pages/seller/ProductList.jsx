@@ -8,7 +8,7 @@ const ProductList = () => {
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [editingProduct, setEditingProduct] = useState(null);
     const [selectedCategory, setSelectedCategory] = useState('All');
-    const [filterCategories] = useState(['All', 'Vegetables', 'Fruits', 'Bundle packages', 'Dairy products', 'Greens', 'Grocery', 'Agro']);
+    const [filterCategories] = useState(['All', 'PC Builds', 'Monitors', 'Pheripherals', 'Internals', 'Gaming', 'Accessories', 'Combos']);
 
     const [draggedItem, setDraggedItem] = useState(null);
     const [localProducts, setLocalProducts] = useState([]);
