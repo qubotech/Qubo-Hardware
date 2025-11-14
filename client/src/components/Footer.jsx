@@ -2,7 +2,7 @@ import { assets } from "../assets/assets";
 
 const Footer = () => {
     return (
-        <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-24 bg-primary/10">
+        <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-24 bg-gradient-to-r from-purple-100 via-blue-100 to-blue-50">
             <div className="flex flex-col md:flex-row items-start justify-between gap-10 py-10 border-b border-gray-500/30 text-gray-500">
                 <div>
                     <img className="h-18 w-40 p-2" src={assets.logo3} alt="logo" />
@@ -52,11 +52,11 @@ const Footer = () => {
     href="https://quboin.vercel.app/"
     target="_blank"
     rel="noopener noreferrer"
-    className="text-green-600 hover:underline"
+    className="text-blue-600 hover:underline"
   >
     Qubo technologies
   </a>{' '}
-  | Farmpick All Rights Reserved.
+  | All Rights Reserved.
 </p>
 
         </div>

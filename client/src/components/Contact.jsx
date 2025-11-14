@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page relative min-h-screen bg-[#f6fff5] overflow-hidden font-sans">
+    <div className="contact-page relative min-h-screen bg-gradient-to-r from-purple-50 via-blue-50 to-blue-100 overflow-hidden font-sans">
       <Toaster position="top-right" />
       <div className="leaves absolute w-full h-full z-0 pointer-events-none">
         {[...Array(15)].map((_, i) => (
@@ -48,17 +48,17 @@ const Contact = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative max-w-6xl mx-auto mt-10 mb-20 backdrop-blur-md bg-green-200/30 dark:bg-green-800/30 text-gray-800 dark:text-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12 z-10"
+        className="relative max-w-6xl mx-auto mt-10 mb-20 backdrop-blur-md bg-purple-200/30 dark:bg-blue-800/30 text-gray-800 dark:text-white rounded-3xl shadow-2xl overflow-hidden p-8 md:p-12 z-10"
       >
         <div className="grid md:grid-cols-2 gap-10">
           <div className="space-y-5">
-            <h2 className="text-4xl font-bold text-green-600 dark:text-green-310">Get in Touch</h2>
+            <h2 className="text-4xl font-bold text-purple-600 dark:text-blue-500">Get in Touch</h2>
             <p>Reach us directly by filling the form or visit us using the map below.</p>
             <div>
               <h4 className="font-semibold">Address:</h4>
               <p>Murugan Nagar, 2/208B, Cross Cut, Guruvayur Nagar, Malumichampatti, Coimbatore, Tamil Nadu 641021</p>
             </div>
-            <div className="h-52 rounded-xl overflow-hidden border-2 border-green-600 shadow-md">
+            <div className="h-52 rounded-xl overflow-hidden border-2 border-purple-400 shadow-md">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.024990232624!2d76.99703807413212!3d10.90388595896412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8594abebaab39%3A0x147b82ec91960583!2sFARM%20PICK!5e0!3m2!1sen!2sin!4v1717904170159!5m2!1sen!2sin"
                 width="100%"
@@ -87,7 +87,7 @@ const Contact = () => {
                     value={formData[field]}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/70 backdrop-blur-md border border-white/70 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/80 shadow-lg placeholder:text-gray-600 text-gray-800"
+                    className="w-full px-4 py-3 bg-white/70 backdrop-blur-md border border-white/70 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 shadow-lg placeholder:text-gray-600 text-gray-800"
                   />
                 ) : (
                   <textarea
@@ -97,7 +97,7 @@ const Contact = () => {
                     value={formData[field]}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/70 backdrop-blur-md border border-white/70 rounded-xl focus:outline-none focus:ring-2 focus:ring-white/80 shadow-lg placeholder:text-gray-600 text-gray-800"
+                    className="w-full px-4 py-3 bg-white/70 backdrop-blur-md border border-white/70 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-300 shadow-lg placeholder:text-gray-600 text-gray-800"
                   />
                 )}
               </motion.div>
@@ -107,7 +107,7 @@ const Contact = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="bg-green-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-green-700 transition"
+              className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-xl font-semibold shadow hover:opacity-90 transition"
             >
               Send Message
             </motion.button>

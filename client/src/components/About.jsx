@@ -64,7 +64,7 @@ const About = () => {
           We envision a transparent food chain by eliminating middlemen, providing healthier food and better returns to farmers.
         </p>
 
-        <h2 data-aos="fade-up">Why Choose Farmpick?</h2>
+        <h2 data-aos="fade-up">Why Choose Qubo ?</h2>
         <div className="features">
           {[
             "🌱 Farm-to-Door Freshness",
@@ -99,17 +99,17 @@ const About = () => {
           <div className="team-members">
             {[
               {
-                name: "Rahul",
+                name: "Ajith",
                 role: "Founder & Operations Head",
                 desc: "Leads farm-to-shelf logistics with unmatched efficiency.",
-                img: "/images/Rahul.png"
+                img: "/images/Ajith.jpg"
               },
-              /*{
-                name: "Dharani",
+              {
+                name: "Raj Kumar",
                 role: "Founder & Marketing Lead",
                 desc: "Ensures Farmpick stays connected with both businesses and households.",
-                img: "/images/Dharani.png"
-              }*/
+                img: "/images/person.jpg"
+              }
             ].map((member, idx) => (
               <div key={idx} className="member-card" data-aos="fade-up">
                 <img src={member.img} alt={member.name} className="profile-img" />
@@ -124,7 +124,7 @@ const About = () => {
 
       {/* Footer */}
       <footer className="glass-footer">
-        <p>&copy; Farmpick india</p>
+        <p>&copy; Qubo india</p>
       </footer>
     </div>
   );

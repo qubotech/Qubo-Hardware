@@ -229,12 +229,12 @@ const Home = () => {
       </div>
 
       {/* Enhanced Daily Freshies Section */}
-      <div className="relative mt-20 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 md:p-12 shadow-xl">
+      <div className="relative mt-20 bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-8 md:p-12 shadow-xl">
         <div className="text-center mb-10">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
-            🌿 Daily Freshies
+            🌿 Top Pheriperals
           </h2>
-          <p className="text-gray-600 text-lg">Farm-fresh produce delivered daily</p>
+          <p className="text-gray-600 text-lg">Top tech products delivered daily</p>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mt-3"></div>
         </div>
         <BestSeller />
@@ -251,7 +251,7 @@ const Home = () => {
       </div>
 
       {/* Enhanced Newsletter Section */}
-      <div className="relative mt-20 bg-gradient-to-r from-green-100 via-emerald-100 to-teal-100 rounded-3xl p-8 md:p-12 shadow-xl">
+      <div className="relative mt-20 bg-gradient-to-r from-purple-100 via-blue-100 to-blue-50 rounded-3xl p-8 md:p-12 shadow-xl">
         <NewsLetter />
       </div>
 

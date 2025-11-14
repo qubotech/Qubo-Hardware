@@ -23,7 +23,7 @@ const testimonials = [
 
 const VoicesOfTrust = () => {
   return (
-    <section className=" mt-20 py-16 px-4 bg-green-50">
+    <section className="mt-20 py-16 px-4 bg-gradient-to-r from-purple-50 via-blue-50 to-blue-100">
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
         Voices of Trust
       </h2>
@@ -33,7 +33,7 @@ const VoicesOfTrust = () => {
             key={index}
             className="bg-white rounded-2xl shadow-lg p-8 text-center"
           >
-            <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-green-600 overflow-hidden">
+            <div className="w-24 h-24 mx-auto mb-6 rounded-full border-4 border-purple-400 overflow-hidden">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
