@@ -120,7 +120,7 @@ export const categories = [
   },
   {
     text: "Pheripherals",
-    path: "Pheriperals",
+    path: "Pheripherals",
     image: bottles_image,
     bgColor: "#F0F5DE",
   },
