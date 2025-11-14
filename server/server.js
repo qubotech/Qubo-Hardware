@@ -43,7 +43,14 @@ app.use(cookieParser());
 app.set('trust proxy', 1); // For secure cookies
 
 // ✅ Routes
-app.get('/', (req, res) => res.send("API is Working"));
+app.get('/', (req, res) => {
+  res.send("API is Working");
+});
+
+// ✅ Add health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ success: true, message: 'Server is healthy' });
+});
 
 app.use('/api/user', userRouter);
 app.use('/api/seller', sellerRouter);
@@ -59,7 +66,18 @@ app.use((err, req, res, next) => {
   res.status(500).json({ success: false, message: err.message || 'Internal Server Error' });
 });
 
-// ✅ Start server directly (no http.createServer or socket.io)
-app.listen(port, () => {
-  console.log(`🚀 Server is running on http://localhost:${port}`);
+// ✅ Log server startup and DB connection
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
 });
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection:', reason);
+});
+
+// ✅ Export the app for Vercel serverless (remove app.listen)
+export default app;
+
+// ✅ Remove this block for Vercel
+// app.listen(port, () => {
+//   console.log(`🚀 Server is running on http://localhost:${port}`);
+// });
