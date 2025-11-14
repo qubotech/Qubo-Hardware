@@ -7,7 +7,7 @@ const Footer = () => {
                 <div>
                     <img className="h-18 w-40 p-2" src={assets.logo3} alt="logo" />
                     <p className="max-w-[410px] mt-6">
-                        We deliver fresh groceries and vegetables straight to your door. Trusted by thousands, we aim to make your shopping experience simple and affordable.
+                        We deliver higher end and people friendly tech straight to your door. Trusted by thousands, we aim to make your shopping experience simple and affordable.
                     </p>
                 </div>
 

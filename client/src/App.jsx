@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation, useNavigate, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { useAppContext } from './context/AppContext';
+import { assets } from './assets/assets';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -83,53 +84,17 @@ const App = () => {
     return () => clearTimeout(timer);
   }, [navigate, location.pathname]);
 
-  // 🔒 Dropdown logic removed (commented out)
-  // const [showDropdown, setShowDropdown] = useState(false);
-
-  // const handleSelect = (e) => {
-  //   const selected = e.target.value;
-  //   localStorage.setItem('siteMode', selected);
-
-  //   if (selected === 'B2B') {
-  //     navigate('/b2b');
-  //   } else if (selected === 'seller') {
-  //     navigate('/seller');
-  //   } else {
-  //     navigate('/');
-  //   }
-
-  //   setShowDropdown(false);
-  // };
-
-  // if (showDropdown) {
-  //   return (
-  //     <div className="flex flex-col items-center justify-center h-screen bg-white text-green-700">
-  //       <div className="mb-4 text-xl font-semibold">Hi User</div>
-  //       <select
-  //         onChange={handleSelect}
-  //         defaultValue=""
-  //         className="border border-green-500 rounded px-4 py-2 text-green-700 focus:outline-none"
-  //       >
-  //         <option value="">Select Site</option>
-  //         <option value="B2C">1. B2C</option>
-  //         <option value="B2B">2. B2B</option>
-  //         {/* <option value="seller">3. Seller</option> */}
-  //       </select>
-  //     </div>
-  //   );
-  // }
-
   if (showInitialLoader) {
     return (
-      <div className="flex flex-col items-center justify-center h-screen bg-white text-green-700">
+      <div className="flex flex-col items-center justify-center h-screen bg-white text-[#5044E5]">
         <div className="flex items-center justify-center w-44 h-44 mb-6 bg-white rounded-full shadow-lg">
-          <img src="/logo.png" alt="Logo" className="w-36 h-36 object-contain" loading="eager" />
+          <img src={assets.logo2} alt="Logo" className="w-36 h-36 object-contain" loading="eager" />
         </div>
         <div className="relative w-12 h-12">
-          <div className="absolute inset-0 border-4 border-green-500 border-dotted rounded-full animate-spin"></div>
-          <div className="absolute inset-2 border-2 border-green-300 border-solid rounded-full animate-spin-slower"></div>
+          <div className="absolute inset-0 border-4 border-[#5044E5] border-dotted rounded-full animate-spin"></div>
+          <div className="absolute inset-2 border-2 border-[#4d8cea] border-solid rounded-full animate-spin-slower"></div>
         </div>
-        <p className="mt-4 text-sm text-green-600 tracking-wide">Welcome</p>
+        <p className="mt-4 text-sm text-[#5044E5] tracking-wide">Welcome</p>
       </div>
     );
   }

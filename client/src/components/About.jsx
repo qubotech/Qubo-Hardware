@@ -47,8 +47,8 @@ const About = () => {
 
       {/* Header */}
       <header className="glass-header" data-aos="fade-down">
-        <h1>About Farmpick</h1>
-        <p>Freshness Delivered. Trust Cultivated.</p>
+        <h1>About Qubo</h1>
+        <p>Technology Delivered. Trust Cultivated.</p>
         <h3>மருந்தென வேண்டாவாம் யாக்கைக்கு அருந்தியது அற்றது போற்றி உணின்.</h3>
       </header>
 
@@ -56,18 +56,18 @@ const About = () => {
       <section className="about-section">
         <h2 data-aos="fade-up">Who We Are</h2>
         <p data-aos="fade-up">
-          At <strong>Farmpick</strong>, we connect farmers directly with consumers, ensuring you get farm-fresh, high-quality products and farmers get fair pay.
+          At <strong>Qubo</strong>, we connect technology directly with consumers, ensuring you get high end, high-quality products and dealers get fair pay.
         </p>
 
         <h2 data-aos="fade-up">Our Mission</h2>
         <p data-aos="fade-up">
-          We envision a transparent food chain by eliminating middlemen, providing healthier food and better returns to farmers.
+          We envision a transparent supply chain by eliminating middlemen, providing healthier food and better returns to dealers.
         </p>
 
         <h2 data-aos="fade-up">Why Choose Qubo ?</h2>
         <div className="features">
           {[
-            "🌱 Farm-to-Door Freshness",
+            "🌱 Eco friendly",
             "📦 Bulk & Retail Friendly",
             "🛒 Easy Ordering Experience",
             "🚚 Fast, Scheduled Deliveries",
@@ -84,8 +84,8 @@ const About = () => {
           {[
             { target: 1800, label: "Orders Delivered" },
             { target: 150, label: "Direct Customers" },
-            { target: 225, label: "Land Acres" },
-            { target: 50, label: "Fresh Vegetables" }
+            { target: 225, label: "Various Products" },
+            { target: 50, label: "Faster Delivery" }
           ].map((stat, idx) => (
             <div key={idx} className="stat-card" data-aos="zoom-in">
               <h3 className="counter" data-target={stat.target}>0</h3>

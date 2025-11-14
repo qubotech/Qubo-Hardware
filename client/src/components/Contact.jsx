@@ -56,11 +56,11 @@ const Contact = () => {
             <p>Reach us directly by filling the form or visit us using the map below.</p>
             <div>
               <h4 className="font-semibold">Address:</h4>
-              <p>Murugan Nagar, 2/208B, Cross Cut, Guruvayur Nagar, Malumichampatti, Coimbatore, Tamil Nadu 641021</p>
+              <p>Sri Ranga street, J.J nagar, Edayarpalayam, Coimbatore, Tamil Nadu 641021</p>
             </div>
             <div className="h-52 rounded-xl overflow-hidden border-2 border-purple-400 shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.024990232624!2d76.99703807413212!3d10.90388595896412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8594abebaab39%3A0x147b82ec91960583!2sFARM%20PICK!5e0!3m2!1sen!2sin!4v1717904170159!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d…&q=Edayarpalayam+Coimbatorehttps://maps.app.goo.gl/xg3ybreDSwkEmc5s8"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

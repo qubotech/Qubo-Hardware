@@ -7,8 +7,9 @@
 }
 
 @theme {
-  --color-primary: #4fbf8b;
-  --color-primary-dull: #44ae7c;
+  --color-primary: #5044E5;
+  --color-primary-light: #4d8cea;
+  --gradient-primary: linear-gradient(to right, #5044E5, #4d8cea);
 }
 
 .no-scrollbar::-webkit-scrollbar{
@@ -80,6 +81,11 @@
 
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
+}
+
+.subscribe-btn {
+  background: linear-gradient(to right, #584eeb, #4d8cea);
+  @apply text-white font-semibold py-3 px-8 rounded transition-all duration-300 hover:opacity-90;
 }
 
 .product-flip-card {
