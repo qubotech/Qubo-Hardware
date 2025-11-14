@@ -21,7 +21,8 @@ await connectCloudinary();
 // ✅ Only use CORS once — this is the correct one
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://quboh.vercel.app/'
+  'https://quboh.vercel.app',
+  'https://qubo-hardware.vercel.app' // ✅ Add this line for deployed frontend
 ];
 
 app.use(cors({
