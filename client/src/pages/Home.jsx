@@ -119,19 +119,11 @@ const Home = () => {
       {/* Enhanced Categories Section */}
       <div className="relative mt-16">
         <div className="text-center mb-10">
-          <h2 
-            className="text-4xl md:text-5xl font-bold mb-3"
-            style={{
-              background: 'linear-gradient(to right, #5044E5, #4d8cea)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-3">
             Shop by Category
           </h2>
           <p className="text-gray-600 text-lg">Browse through our fresh selection</p>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mt-3"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mt-3"></div>
         </div>
         <Categories />
       </div>

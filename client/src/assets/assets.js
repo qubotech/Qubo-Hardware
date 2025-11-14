@@ -25,13 +25,13 @@ import main_banner_bg_sm from "./main_banner_bg_sm.png";
 import bottom_banner_image from "./bottom_banner_image.png";
 import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
 import add_address_iamge from "./add_address_image.svg";
-import organic_vegitable_image from "./PC Category 1.png";
-import fresh_fruits_image from "./PC Category 2.png";
-import bottles_image from "./PC Category 4.png";
-import maggi_image from "./PC Category 3.png";
-import dairy_product_image from "./PC Category 5.png";
-import bakery_image from "./PC Category 6.png";
-import grain_image from "./PC Category 7.png";
+import organic_vegitable_image from "./organic_vegitable_image.png";
+import fresh_fruits_image from "./fresh_fruits_image.png";
+import bottles_image from "./budle-pack-removebg-preview.png";
+import maggi_image from "./business.png";
+import dairy_product_image from "./dairy_product_image.png";
+import bakery_image from "./fresh_farm-removebg-preview.png";
+import grain_image from "./grain_image.png";
 import potato_image_1 from "./potato_image_1.png";
 import potato_image_2 from "./potato_image_2.png";
 import potato_image_3 from "./potato_image_3.png";
@@ -107,43 +107,43 @@ export const assets = {
 
 export const categories = [
   {
-    text: "PC Builds",
+    text: "Organic veggies",
     path: "Vegetables",
     image: organic_vegitable_image,
     bgColor: "#FEF6DA",
   },
   {
-    text: "Monitors",
+    text: "Fresh Fruits",
     path: "Fruits",
     image: fresh_fruits_image,
     bgColor: "#FEE0E0",
   },
   {
-    text: "Pheripherals",
+    text: "Bundle Packages",
     path: "Drinks",
     image: bottles_image,
     bgColor: "#F0F5DE",
   },
   {
-    text: "Internals",
+    text: "Business",
     path: "Instant",
     image: maggi_image,
     bgColor: "#E1F5EC",
   },
   {
-    text: "Gaming",
+    text: "Dairy Products",
     path: "Dairy",
     image: dairy_product_image,
     bgColor: "#FEE6CD",
   },
   {
-    text: "Accessories",
+    text: "Greens",
     path: "Greens",
     image: bakery_image,
     bgColor: "#E0F6FE",
   },
   {
-    text: "Combo's",
+    text: "Grocery",
     path: "Grains",
     image: grain_image,
     bgColor: "#F1E3F9",

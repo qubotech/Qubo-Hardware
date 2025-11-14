@@ -85,13 +85,7 @@ const Navbar = () => {
   }, [searchQuery])
 
   return (
-    <nav
-      className="backdrop-blur-md bg-[rgba(255,255,255,0.65)] text-black border-b border-gray-300 shadow-md flex items-center justify-between px-6 md:px-12 lg:px-20 xl:px-28 py-2 sticky top-0 z-50 transition-all"
-      style={{
-        fontFamily: '"Manrope", sans-serif',
-        fontWeight: 500,
-      }}
-    >
+    <nav className="backdrop-blur-md bg-[rgba(255,255,255,0.65)] text-black border-b border-gray-300 shadow-md flex items-center justify-between px-6 md:px-12 lg:px-20 xl:px-28 py-2 sticky top-0 z-50 transition-all">
       <NavLink
         to="/"
         onClick={() => {
@@ -103,28 +97,11 @@ const Navbar = () => {
         <img className="h-10 w-auto rounded-lg object-contain" src={assets.logo2} alt="logo" />
       </NavLink>
 
-      <div className="hidden sm:flex items-center gap-8 text-gray-800" style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}>
-        <NavLink
-          to='/'
-
-          className="hover:scale-110 hover:text-primary transition duration-200"
-          style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-        >Home</NavLink>
-        <NavLink
-          to='/products'
-          className="hover:scale-110 hover:text-primary transition duration-200"
-          style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-        >All Products</NavLink>
-        <NavLink
-          to='/About'
-          className="hover:scale-110 hover:text-primary transition duration-200"
-          style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-        >About</NavLink>
-        <NavLink
-          to='/Contact'
-          className="hover:scale-110 hover:text-primary transition duration-200"
-          style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-        >Contact Us</NavLink>
+      <div className="hidden sm:flex items-center gap-8 text-gray-800">
+        <NavLink to='/' className="hover:scale-110 hover:text-primary transition duration-200">Home</NavLink>
+        <NavLink to='/products' className="hover:scale-110 hover:text-primary transition duration-200">All Products</NavLink>
+        <NavLink to='/About' className="hover:scale-110 hover:text-primary transition duration-200">About</NavLink>
+        <NavLink to='/Contact' className="hover:scale-110 hover:text-primary transition duration-200">Contact Us</NavLink>
 
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-2 py-1 rounded-full bg-white/50 backdrop-blur relative">
           <input 
@@ -187,33 +164,13 @@ const Navbar = () => {
             alt='cart'
             className={`w-5 opacity-80 transition-transform duration-300 ${animateCart ? "animate-bounce" : ""}`}
           />
-          <button
-            className="absolute -top-2 -right-3 text-xs text-white w-[16px] h-[16px] rounded-full flex items-center justify-center border-none outline-none"
-            style={{
-              background: 'linear-gradient(to right, #5044E5, #4d8cea)',
-              transition: 'background 0.2s',
-              padding: 0,
-            }}
-            tabIndex={-1}
-            disabled
-          >
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[16px] h-[16px] rounded-full">
             {getCartCount()}
           </button>
         </div>
 
         {!user ? (
-          <button
-            onClick={() => setShowUserLogin(true)}
-            className="cursor-pointer px-6 py-1.5 text-white rounded-full text-sm"
-            style={{
-              background: 'linear-gradient(to right, #5044E5, #4d8cea)',
-              transition: 'background 0.2s',
-              fontFamily: '"Manrope", sans-serif',
-              fontWeight: 500,
-            }}
-            onMouseOver={e => e.currentTarget.style.background = '#4d8cea'}
-            onMouseOut={e => e.currentTarget.style.background = 'linear-gradient(to right, #5044E5, #4d8cea)'}
-          >
+          <button onClick={() => setShowUserLogin(true)} className="cursor-pointer px-6 py-1.5 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
             Login / Signup
           </button>
         ) : (
@@ -233,7 +190,7 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className='flex items-center gap-4 sm:hidden' style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}>
+      <div className='flex items-center gap-4 sm:hidden'>
         <div onClick={() => navigate("/cart")} className="relative cursor-pointer">
           <img
             id="cart-icon"
@@ -241,16 +198,7 @@ const Navbar = () => {
             alt='cart'
             className={`w-5 opacity-80 transition-transform duration-300 ${animateCart ? "animate-bounce" : ""}`}
           />
-          <button
-            className="absolute -top-2 -right-3 text-xs text-white w-[16px] h-[16px] rounded-full flex items-center justify-center border-none outline-none"
-            style={{
-              background: 'linear-gradient(to right, #5044E5, #4d8cea)',
-              transition: 'background 0.2s',
-              padding: 0,
-            }}
-            tabIndex={-1}
-            disabled
-          >
+          <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[16px] h-[16px] rounded-full">
             {getCartCount()}
           </button>
         </div>
@@ -260,13 +208,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div
-          className="md:hidden absolute top-[60px] left-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-lg py-4 px-4 flex flex-col gap-3 text-black rounded-b-xl text-sm"
-          style={{
-            fontFamily: '"Manrope", sans-serif',
-            fontWeight: 500,
-          }}
-        >
+        <div className="md:hidden absolute top-[60px] left-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-lg py-4 px-4 flex flex-col gap-3 text-black rounded-b-xl text-sm">
           {/* ✅ Show user name in mobile menu */}
           {user && (
             <div className="px-4 py-2 bg-primary/10 rounded-lg">
@@ -275,39 +217,19 @@ const Navbar = () => {
             </div>
           )}
           
-          <NavLink
-            to="/"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200"
-            style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-          >
+          <NavLink to="/" onClick={() => setOpen(false)} className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200">
             <FontAwesomeIcon icon={faHome} className="w-4 h-4" />
             Home
           </NavLink>
-          <NavLink
-            to="/products"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200"
-            style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-          >
+          <NavLink to="/products" onClick={() => setOpen(false)} className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200">
             <FontAwesomeIcon icon={faBoxOpen} className="w-4 h-4" />
             All Products
           </NavLink>
-          <NavLink
-            to="/About"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200"
-            style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-          >
+          <NavLink to="/About" onClick={() => setOpen(false)} className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200">
             <FontAwesomeIcon icon={faInfoCircle} className="w-4 h-4" />
             About
           </NavLink>
-          <NavLink
-            to="/Contact"
-            onClick={() => setOpen(false)}
-            className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200"
-            style={{ fontFamily: '"Manrope", sans-serif', fontWeight: 500 }}
-          >
+          <NavLink to="/Contact" onClick={() => setOpen(false)} className="flex items-center gap-2 hover:scale-110 hover:text-primary transition duration-200">
             <FontAwesomeIcon icon={faPhone} className="w-4 h-4" />
             Contact Us
           </NavLink>
@@ -323,15 +245,7 @@ const Navbar = () => {
                 setOpen(false);
                 setShowUserLogin(true);
               }}
-              className="flex items-center gap-2 cursor-pointer px-5 py-1.5 text-white rounded-full text-sm"
-              style={{
-                background: 'linear-gradient(to right, #5044E5, #4d8cea)',
-                transition: 'background 0.2s',
-                fontFamily: '"Manrope", sans-serif',
-                fontWeight: 500,
-              }}
-              onMouseOver={e => e.currentTarget.style.background = '#4d8cea'}
-              onMouseOut={e => e.currentTarget.style.background = 'linear-gradient(to right, #5044E5, #4d8cea)'}
+              className="flex items-center gap-2 cursor-pointer px-5 py-1.5 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm"
             >
               <FontAwesomeIcon icon={faSignInAlt} className="w-4 h-4" />
               Login / Signup

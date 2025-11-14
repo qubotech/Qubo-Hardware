@@ -21,8 +21,7 @@ await connectCloudinary();
 // ✅ Only use CORS once — this is the correct one
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://quboh.vercel.app',
-  'https://qubo-hardware.vercel.app' // ✅ Add this line for deployed frontend
+  'https://farmpickshope.vercel.app'
 ];
 
 app.use(cors({
@@ -43,14 +42,7 @@ app.use(cookieParser());
 app.set('trust proxy', 1); // For secure cookies
 
 // ✅ Routes
-app.get('/', (req, res) => {
-  res.send("API is Working");
-});
-
-// ✅ Add health check endpoint
-app.get('/health', (req, res) => {
-  res.json({ success: true, message: 'Server is healthy' });
-});
+app.get('/', (req, res) => res.send("API is Working"));
 
 app.use('/api/user', userRouter);
 app.use('/api/seller', sellerRouter);
@@ -60,24 +52,7 @@ app.use('/api/address', addressRouter);
 app.use('/api/order', orderRouter);
 app.use('/api/category', CategoryRouter);
 
-// ✅ Global error handler (add before app.listen)
-app.use((err, req, res, next) => {
-  console.error('Unhandled error:', err);
-  res.status(500).json({ success: false, message: err.message || 'Internal Server Error' });
+// ✅ Start server directly (no http.createServer or socket.io)
+app.listen(port, () => {
+  console.log(`🚀 Server is running on http://localhost:${port}`);
 });
-
-// ✅ Log server startup and DB connection
-process.on('uncaughtException', (err) => {
-  console.error('Uncaught Exception:', err);
-});
-process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection:', reason);
-});
-
-// ✅ Export the app for Vercel serverless (remove app.listen)
-export default app;
-
-// ✅ Remove this block for Vercel
-// app.listen(port, () => {
-//   console.log(`🚀 Server is running on http://localhost:${port}`);
-// });
